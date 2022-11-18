@@ -106,7 +106,8 @@ function fn_egov_delete_QustnrTmplatManage(){
     <th scope="row" width="20%" height="23" class="required_text" nowrap >템플릿설명<img src="${ImgUrl}icon/required.gif" alt="필수항목" title="필수항목" width="15" height="15"></th>
     <td width="80%" >
       <br>
-      <c:out value="${fn:replace(resultList[0].qestnrTmplatCn , crlf , '<br/>')}" escapeXml="false"/>
+      <!-- xss <c:out value="${fn:replace(resultList[0].qestnrTmplatCn , crlf , '<br/>')}" escapeXml="false"/> -->
+      <c:out value="${fn:replace(resultList[0].qestnrTmplatCn , crlf , '<br/>')}"/>
 	  <br><br>
     </td>
   </tr>
